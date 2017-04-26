@@ -105,11 +105,13 @@
                     <navigationItem key="navigationItem" title="ToDo" id="ktg-gc-UZk">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="QnX-gF-kN5">
                             <connections>
-                                <action selector="addTodoItem:" destination="BYZ-38-t0r" id="CEd-xV-kWe"/>
+                                <action selector="addTodoItem:" destination="BYZ-38-t0r" id="zep-L8-hgX"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addTodo" destination="QnX-gF-kN5" id="TMF-7x-XUr"/>
+                        <outlet property="clearTodoBtn" destination="xgb-Ub-PPC" id="9gh-1u-REg"/>
                         <outlet property="tableView" destination="yax-Sl-ogz" id="Ejp-QF-1Aj"/>
                     </connections>
                 </viewController>

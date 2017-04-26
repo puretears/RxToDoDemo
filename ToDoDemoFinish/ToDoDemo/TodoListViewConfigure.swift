@@ -43,7 +43,7 @@ extension TodoListViewController {
         let data = NSMutableData()
         let archiver = NSKeyedArchiver(forWritingWith: data)
         
-        archiver.encode(todoItems, forKey: "TodoItems")
+        archiver.encode(todoItems.value, forKey: "TodoItems")
         archiver.finishEncoding()
         
         data.write(to: dataFilePath(), atomically: true)
@@ -54,7 +54,7 @@ extension TodoListViewController {
         
         if let data = try? Data(contentsOf: path) {
             let unarchiver = NSKeyedUnarchiver(forReadingWith: data)
-            todoItems = unarchiver.decodeObject(forKey: "TodoItems") as! [TodoItem]
+            todoItems.value = unarchiver.decodeObject(forKey: "TodoItems") as! [TodoItem]
             
             unarchiver.finishDecoding()
         }
