@@ -11,6 +11,8 @@ import UIKit
 class TodoListViewController: UIViewController {
     var todoItems: [TodoItem] = []
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var clearTodoBtn: UIButton!
+    @IBOutlet weak var addTodo: UIBarButtonItem!
     
     required init?(coder aDecoder: NSCoder) {
         todoItems = [TodoItem]()

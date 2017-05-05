@@ -110,6 +110,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addTodo" destination="QnX-gF-kN5" id="DP4-DZ-ypK"/>
+                        <outlet property="clearTodoBtn" destination="xgb-Ub-PPC" id="7Ir-Sp-5Yt"/>
                         <outlet property="tableView" destination="yax-Sl-ogz" id="Ejp-QF-1Aj"/>
                     </connections>
                 </viewController>
