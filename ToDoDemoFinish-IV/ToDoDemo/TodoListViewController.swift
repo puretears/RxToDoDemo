@@ -82,11 +82,6 @@ class TodoListViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-//    @IBAction func addTodoItem(_ sender: Any) {
-//        let todoItem = TodoItem(name: "Todo Demo", isFinished: false)
-//        todoItems.value.append(todoItem)
-//    }
-
     @IBAction func syncToCloud(_ sender: Any) {
         // Add sync code here
         _ = syncTodoToCloud().subscribe(

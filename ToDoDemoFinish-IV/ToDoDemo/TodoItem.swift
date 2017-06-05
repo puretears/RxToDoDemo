@@ -17,8 +17,8 @@ class TodoItem: NSObject, NSCoding {
         name = aDecoder.decodeObject(forKey: "Name") as! String
         isFinished = aDecoder.decodeBool(forKey: "isFinished")
         pictureMemoFilename = aDecoder.decodeObject(
-                forKey: "pictureMemoFilename") as! String
-
+            forKey: "pictureMemoFilename") as! String
+        
         super.init()
     }
     

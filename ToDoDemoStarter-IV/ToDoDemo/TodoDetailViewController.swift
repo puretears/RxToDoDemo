@@ -26,7 +26,7 @@ class TodoDetailViewController: UITableViewController {
     @IBOutlet weak var memoCollageBtn: UIButton!
     
     override func viewDidLoad() {
-        super.viewDidLoad()()
+        super.viewDidLoad()
         
         todoName.becomeFirstResponder()
 
