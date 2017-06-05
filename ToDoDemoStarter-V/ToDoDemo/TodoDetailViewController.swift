@@ -32,6 +32,22 @@ class TodoDetailViewController: UITableViewController {
         todoName.becomeFirstResponder()
         self.setMemoSectionHederText()
 
+        images.asObservable().subscribe(onNext: {
+            [weak self] images in
+            guard let `self` = self else {
+                return
+            }
+
+            guard !images.isEmpty else {
+                self.resetMemoBtn()
+                return
+            }
+
+            self.todoCollage = UIImage.collage(images: images,
+                in: self.memoCollageBtn.frame.size)
+            self.setMemoBtn(bkImage: self.todoCollage ?? UIImage())
+        }).addDisposableTo(bag)
+
         if let todoItem = todoItem {
             self.todoName.text = todoItem.name
             self.isFinished.isOn = todoItem.isFinished
@@ -48,22 +64,6 @@ class TodoDetailViewController: UITableViewController {
         else {
             todoItem = TodoItem()
         }
-
-        images.asObservable().subscribe(onNext: {
-            [weak self] images in
-            guard let `self` = self else {
-                return
-            }
-
-            guard !images.isEmpty else {
-                self.resetMemoBtn()
-                return
-            }
-
-            self.todoCollage = UIImage.collage(images: images,
-                in: self.memoCollageBtn.frame.size)
-            self.setMemoBtn(bkImage: self.todoCollage ?? UIImage())
-        }).addDisposableTo(bag)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
