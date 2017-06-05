@@ -144,10 +144,6 @@ extension TodoDetailViewController {
     func setMemoSectionHederText() {
         // Todo: Set section header to the number of
         // pictures selected.
-        guard !images.value.isEmpty,
-              let headerView = self.tableView.headerView(forSection: 2) else { return }
-
-        headerView.textLabel?.text = "\(images.value.count) MEMOS"
     }
 }
 

@@ -20,8 +20,7 @@
 		68849D371EB4BC5900AAFDFC /* Flash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68849D361EB4BC5900AAFDFC /* Flash.swift */; };
 		688DFBEB1EB0D012006DA1B9 /* TodoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688DFBEA1EB0D012006DA1B9 /* TodoDetailViewController.swift */; };
 		68BDC20F1EAF195700E53831 /* TodoListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BDC20E1EAF195700E53831 /* TodoListTableView.swift */; };
-		994BF0B4DE615D3FAD5FF022 /* UIImage+Collage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994BF721C858BB5352F08B6F /* UIImage+Collage.swift */; };
-		994BF6E374BA7600A6825817 /* PHPhotoLibrary+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994BFB8BB78F040FB2EB2A82 /* PHPhotoLibrary+Rx.swift */; };
+		68C9CB501ED54F300098444C /* UIImage+Collage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C9CB4F1ED54F300098444C /* UIImage+Collage.swift */; };
 		D73166298D67064A2BD67033 /* Pods_ToDoDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BDB3692D573883F4FF6868 /* Pods_ToDoDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,10 +41,9 @@
 		68849D361EB4BC5900AAFDFC /* Flash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flash.swift; sourceTree = "<group>"; };
 		688DFBEA1EB0D012006DA1B9 /* TodoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoDetailViewController.swift; sourceTree = "<group>"; };
 		68BDC20E1EAF195700E53831 /* TodoListTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoListTableView.swift; sourceTree = "<group>"; };
+		68C9CB4F1ED54F300098444C /* UIImage+Collage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Collage.swift"; sourceTree = "<group>"; };
 		68EB3B3F1EB4DCF300AE289C /* ToDoDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ToDoDemo.entitlements; sourceTree = "<group>"; };
 		84BDB3692D573883F4FF6868 /* Pods_ToDoDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToDoDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		994BF721C858BB5352F08B6F /* UIImage+Collage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Collage.swift"; sourceTree = "<group>"; };
-		994BFB8BB78F040FB2EB2A82 /* PHPhotoLibrary+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PHPhotoLibrary+Rx.swift"; sourceTree = "<group>"; };
 		A293410AC09EB38AD76E99BD /* Pods-ToDoDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToDoDemo/Pods-ToDoDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,8 +116,7 @@
 				68BDC20E1EAF195700E53831 /* TodoListTableView.swift */,
 				68849D361EB4BC5900AAFDFC /* Flash.swift */,
 				680B7D951ED1E3E700CFE2A2 /* PhotoCell.swift */,
-				994BF721C858BB5352F08B6F /* UIImage+Collage.swift */,
-				994BFB8BB78F040FB2EB2A82 /* PHPhotoLibrary+Rx.swift */,
+				68C9CB4F1ED54F300098444C /* UIImage+Collage.swift */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -288,11 +285,10 @@
 				680B7D941ED1D07100CFE2A2 /* PhotoCollectionViewController.swift in Sources */,
 				68849D331EB4A5F700AAFDFC /* PlistDocument.swift in Sources */,
 				680B7D961ED1E3E700CFE2A2 /* PhotoCell.swift in Sources */,
+				68C9CB501ED54F300098444C /* UIImage+Collage.swift in Sources */,
 				686A84F81EAE07E000F659C1 /* AppDelegate.swift in Sources */,
 				686A850E1EAE141200F659C1 /* TodoItem.swift in Sources */,
 				688DFBEB1EB0D012006DA1B9 /* TodoDetailViewController.swift in Sources */,
-				994BF0B4DE615D3FAD5FF022 /* UIImage+Collage.swift in Sources */,
-				994BF6E374BA7600A6825817 /* PHPhotoLibrary+Rx.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

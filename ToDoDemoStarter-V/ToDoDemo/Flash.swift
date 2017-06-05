@@ -9,7 +9,7 @@
 import UIKit
 
 
-extension UIViewController {
+extension TodoListViewController {
     typealias AlertCallback =  ((UIAlertAction) -> Void)
     
     func flash(title: String, message: String, callback: AlertCallback? = nil) {
