@@ -11,14 +11,15 @@ import Photos
 import RxSwift
 
 class PhotoCollectionViewController: UICollectionViewController {
-    fileprivate lazy var photos = PhotoCollectionViewController.loadPhotos()
-    fileprivate lazy var imageManager = PHCachingImageManager()
 
     fileprivate let selectedPhotosSubject = PublishSubject<UIImage>()
     var selectedPhotos: Observable<UIImage> {
         return selectedPhotosSubject.asObservable()
     }
     let bag = DisposeBag()
+
+    fileprivate lazy var photos = PhotoCollectionViewController.loadPhotos()
+    fileprivate lazy var imageManager = PHCachingImageManager()
     
     fileprivate lazy var thumbnailsize: CGSize = {
         let cellSize = (self.collectionViewLayout as! UICollectionViewFlowLayout).itemSize
@@ -36,7 +37,7 @@ class PhotoCollectionViewController: UICollectionViewController {
         super.didReceiveMemoryWarning()
     }
 
-    override func viewWillDisappear(_ animated: Bool) {
+    open override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         selectedPhotosSubject.onCompleted()
     }
@@ -78,10 +79,12 @@ extension PhotoCollectionViewController {
         cell.representedAssetIdentifier = asset.localIdentifier
         
         imageManager.requestImage(for: asset,
-            targetSize: thumbnailsize,
-            contentMode: .aspectFill,
-            options: nil,
-            resultHandler: { (image, _) in
+                                  targetSize: thumbnailsize,
+                                  contentMode: .aspectFill,
+                                  options: nil,
+                                  resultHandler:
+            { (image, _) in
+            
                 guard let image = image else { return }
             
                 if cell.representedAssetIdentifier == asset.localIdentifier {
@@ -96,11 +99,11 @@ extension PhotoCollectionViewController {
     override func collectionView(_ collectionView: UICollectionView,
                                  didSelectItemAt indexPath: IndexPath) {
         let asset = photos.object(at: indexPath.item)
-
+        
         if let cell = collectionView.cellForItem(at: indexPath) as? PhotoCell {
             cell.selected()
         }
-
+        
         imageManager.requestImage(for: asset,
             targetSize: view.frame.size,
             contentMode: .aspectFill,
@@ -109,8 +112,9 @@ extension PhotoCollectionViewController {
                 guard let image = image, let info = info else { return }
 
                 if let isThumbnail = info[PHImageResultIsDegradedKey] as? Bool,
-                   !isThumbnail {
+                    !isThumbnail {
 
+                    // TODO: Trigger photo selection event here
                     self?.selectedPhotosSubject.onNext(image)
                 }
             })
