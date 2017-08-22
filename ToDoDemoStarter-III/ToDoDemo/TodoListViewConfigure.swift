@@ -11,6 +11,13 @@ import UIKit
 let CELL_CHECKMARK_TAG = 1001
 let CELL_TODO_TITLE_TAG = 1002
 
+enum SaveTodoError: Error {
+    case cannotSaveToLocalFile
+    case iCloudIsNotEnabled
+    case cannotReadLocalFile
+    case cannotCreateFileOnCloud
+}
+
 extension TodoListViewController {
     func configureStatus(for cell: UITableViewCell, with item: TodoItem) {
         let label = cell.viewWithTag(CELL_CHECKMARK_TAG) as! UILabel
